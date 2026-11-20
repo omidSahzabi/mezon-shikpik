@@ -1,0 +1,35 @@
+name: mezon-schema-v2
+services:
+  db:
+    image: postgres:15
+    env_file: ./backend/.env.v2.local
+    environment:
+      POSTGRES_DB: mezon_lms
+      POSTGRES_USER: mezon_owner
+    ports:
+      - '127.0.0.1:55432:5432'
+    volumes:
+      - mezon_v2_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U mezon_owner -d mezon_lms']
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  django:
+    build:
+      context: ./backend
+      dockerfile: schema_v2/Dockerfile
+    env_file: ./backend/.env.v2.local
+    environment:
+      DJANGO_SETTINGS_MODULE: schema_v2.settings
+      POSTGRES_HOST: db
+      POSTGRES_PORT: '5432'
+      POSTGRES_USER: mezon_owner
+    volumes:
+      - ./backend:/app
+      - ./local-credentials.md:/local-credentials.md
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  mezon_v2_data:
