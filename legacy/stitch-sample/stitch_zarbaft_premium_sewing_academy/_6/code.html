@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>جزئیات الگو | دوخت آکادمی</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        /* Fallback for Persian Typography if specific fonts aren't local */
+        :root {
+            --primary-font: 'Plus Jakarta Sans', 'Tahoma', sans-serif;
+            --body-font: 'Inter', 'Tahoma', sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: #f8f9ff;
+            color: #0d1c2e;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .premium-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8f9ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e3bdbf;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#ffdadb",
+                      "inverse-surface": "#233144",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "inverse-on-surface": "#eaf1ff",
+                      "tertiary-container": "#5c6164",
+                      "primary": "#95002a",
+                      "outline-variant": "#e3bdbf",
+                      "background": "#f8f9ff",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "surface-container-highest": "#d5e3fc",
+                      "surface-container": "#e6eeff",
+                      "primary-container": "#be123c",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-surface": "#0d1c2e",
+                      "on-primary-fixed-variant": "#920029",
+                      "surface-bright": "#f8f9ff",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "on-error": "#ffffff",
+                      "surface": "#f8f9ff",
+                      "surface-tint": "#bb0f3a",
+                      "on-primary-fixed": "#40000d",
+                      "surface-container-high": "#dce9ff",
+                      "secondary-container": "#dae2fd",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "outline": "#8f6f70",
+                      "tertiary": "#44494d",
+                      "surface-dim": "#ccdbf3",
+                      "on-secondary-container": "#5c647a",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#5b4041",
+                      "on-primary-container": "#ffd0d2",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#d8dce0",
+                      "inverse-primary": "#ffb2b7",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#dfe3e7",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#565e74",
+                      "on-tertiary-fixed": "#171c1f",
+                      "surface-variant": "#d5e3fc",
+                      "secondary-fixed": "#dae2fd",
+                      "on-background": "#0d1c2e",
+                      "surface-container-low": "#eff4ff",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "sidebar-width": "280px",
+                      "lg": "40px",
+                      "base": "8px",
+                      "xl": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Geist"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "title-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Geist"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">دوخت آکادمی</span>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-xl font-title-md text-title-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">درباره ما</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">کارگاه‌ها</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="#">الگوها</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">دوره‌ها</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-primary font-title-md px-md py-xs active:scale-95 transition-transform">ورود | ثبت‌نام</button>
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pr-10 pl-4 py-2 bg-surface-container-low border-none rounded-full text-label-md focus:ring-2 focus:ring-primary/20 w-48 transition-all focus:w-64" placeholder="جستجوی الگو..." type="text"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-xl px-gutter max-w-container-max mx-auto">
+<!-- Breadcrumbs -->
+<nav class="mb-lg flex items-center gap-xs text-label-md text-on-surface-variant">
+<a class="hover:text-primary" href="#">صفحه اصلی</a>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<a class="hover:text-primary" href="#">الگوهای خیاطی</a>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<span class="text-primary font-bold">کت کلاسیک زنانه مدل الین</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- Main Content Area (Column 1-8) -->
+<div class="lg:col-span-8 flex flex-col gap-lg">
+<!-- Product Gallery Section -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-sm h-[600px]">
+<div class="md:col-span-3 h-full rounded-xl overflow-hidden premium-card">
+<div class="w-full h-full bg-cover bg-center cursor-zoom-in" data-alt="A high-end studio photography shot of a tailored women's blazer in a minimalist ivory wool fabric. The garment is displayed on a professional mannequin against a soft beige background with elegant architectural shadows. The lighting is soft and diffused, highlighting the intricate stitching and precise structural lines of the pattern. The aesthetic is premium, clean, and sophisticated." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy-A_YU-VbOTSk0ZLOeFtt1xt6w86Su9kO52ivGymnsZ4hcThYVzgIM76OCbK4Lo8dekN7EWbtTSo2TVfUMrPSbuy9w5oUGDSvq_r-GBXXKyQi14RLKLomw-wfG64D9ocPVsn98xs9HvTAeeJeBdFtvgAeAGUFtFqn_3ybFhTIc8DGZSZlwLj8LquHJjpiWgF54_WqNahjtCFmBENnEUPeN7wSsJTYkYmY9l5wLuxn9Un060Mij4js2ZEUKaGid0E2zNO8gofIzeo')">
+</div>
+</div>
+<div class="md:col-span-1 flex md:flex-col gap-sm overflow-y-auto pr-1">
+<div class="h-1/3 md:h-1/4 rounded-lg overflow-hidden premium-card flex-shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A close-up detail shot of a garment's pocket and lapel construction. The image shows the fine texture of premium wool fabric and the expert tailoring of the Classic Elin Blazer. The lighting emphasizes the 3D quality of the seams and the subtle sheen of the thread. Modern, high-fashion editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQvNg07Qn85SXSd-9y17M5ZVHQXXNxiJo3kQOH2jJxNIYYd1yZOlicTG38hz6-U3XvcrkAwYBz6rIBNef7zfEZdM3l2g_ILftrohYTNS7AdPnH3u39lPvvdPW8xri2uhcy9kw4vfFy-mZfX2S5YCQ6iKClKnOGhanq3cg_awGkM3kab6AwWjYut0xIoHrNSJyzUD4lRvxaeJQx3G4ORtQMUa528Q8EL5UoXGXmO1DezSp5IFrH99vR2IgHHO4iKmCU5JB2-JOMsWU')"></div>
+</div>
+<div class="h-1/3 md:h-1/4 rounded-lg overflow-hidden premium-card flex-shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A model wearing the Classic Elin Blazer in a minimalist urban setting. She is standing against a clean concrete wall with soft morning sunlight casting long, artistic shadows. The blazer is paired with simple black trousers, showcasing a versatile and elegant look for a modern professional woman." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7VNVUKAki5pGjGlvzvIzALBebYzgaGZRs6Ouag4n_JTU78DJYDmNRW7SCuqIDrBmJslKSHnGXTYF9r7B2Xqxzt08UTmwdKaMpjHYjJlFUumSop3Qy1i46adffEzR2AUUCM5m0A3sfLtP0KY53F8hHMFKs-6y-nIKEzJBXz2qigIMhPT5Rn5tAJhs2pQZpuB9hqobWt9OSYwjwOqIqaOo8X2QoRx5DQleA8ZMgvQhps_vm5CfTH0uz4SZ0zVMIFaakBo2A8NZLizQ')"></div>
+</div>
+<div class="h-1/3 md:h-1/4 rounded-lg overflow-hidden premium-card flex-shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A technical flat drawing of the sewing pattern shown on a clean digital interface. The lines are precise and professional, illustrating the front and back views of the blazer with all construction details clearly visible. The background is a soft off-white, maintaining the high-end digital atelier aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8K2Tr54CNQMidqMYhAoPhBhI5R3v47Ai6jPzbl3SJIUbbPtnM3EGUcYzQ45j1RL0S4AeKwQ-hBXcEjSutv7BxL-gtxyJpjb5kGDHMVdjoIn8nFu0WDTzIfxcNWbg77e8HWBZxAJIaoqv629a_Qpandbxnn3RQNjcN9PVa2wi3P6ORW_OnmTm45pDXlv-tbU3JSeMz-NnI4P5vVnEZdKTHL6CNn1MuZBegjNnS2CQxhP7p_PP3L84t1aJViX7C4KUEqodU-0MvOwY')"></div>
+</div>
+</div>
+</section>
+<!-- Detailed Description -->
+<section class="premium-card p-lg rounded-xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-md">کت کلاسیک زنانه مدل الین (Classic Elin Blazer)</h1>
+<div class="flex items-center gap-md mb-lg">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md">۴.۹ (۴۵ نظر)</span>
+</div>
+<div class="w-px h-4 bg-outline-variant/50"></div>
+<span class="text-label-md text-on-surface-variant">درجه سختی: پیشرفته</span>
+</div>
+<div class="prose prose-primary max-w-none font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p class="mb-md text-on-surface font-bold">زیبایی در جزئیات است.</p>
+<p>الگوی کت الین برای خیاطانی طراحی شده است که به دنبال خلق یک اثر ماندگار در کمد لباس خود هستند. این الگو با برش‌های دقیق عصایی و یقه‌ی کلاسیک انگلیسی، فرمی بی‌نقص به بدن می‌بخشد. آستین‌های دو تکه و چاک‌های ظریف در پشت کت، آزادی حرکت را در کنار استایل رسمی تضمین می‌کند.</p>
+</div>
+<div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-lg border-t border-outline-variant/20 pt-lg">
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined">content_cut</span>
+                                ملزومات پارچه
+                            </h3>
+<ul class="space-y-sm text-body-md text-on-surface-variant">
+<li class="flex items-center justify-between border-b border-outline-variant/10 pb-2">
+<span>پارچه اصلی (کرپ، فوتر، فاستونی)</span>
+<span class="font-bold text-on-surface">۲.۵ متر</span>
+</li>
+<li class="flex items-center justify-between border-b border-outline-variant/10 pb-2">
+<span>آستری (ساتن یا ابریشم)</span>
+<span class="font-bold text-on-surface">۱.۸ متر</span>
+</li>
+<li class="flex items-center justify-between">
+<span>لایی چسب و دکمه</span>
+<span class="font-bold text-on-surface">به مقدار لازم</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined">straighten</span>
+                                سایزبندی
+                            </h3>
+<div class="flex flex-wrap gap-xs">
+<span class="px-md py-xs bg-surface-container rounded-lg font-label-md border border-outline-variant/20">EU 36</span>
+<span class="px-md py-xs bg-surface-container rounded-lg font-label-md border border-outline-variant/20">EU 38</span>
+<span class="px-md py-xs bg-primary text-on-primary rounded-lg font-label-md">EU 40</span>
+<span class="px-md py-xs bg-surface-container rounded-lg font-label-md border border-outline-variant/20">EU 42</span>
+<span class="px-md py-xs bg-surface-container rounded-lg font-label-md border border-outline-variant/20">EU 44</span>
+</div>
+<button class="mt-md text-primary font-label-md underline underline-offset-4 hover:opacity-80">مشاهده جدول دقیق اندازه‌ها</button>
+</div>
+</div>
+</section>
+<!-- Review Section -->
+<section class="premium-card p-lg rounded-xl">
+<div class="flex justify-between items-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg">نظرات هنرجویان</h2>
+<button class="text-primary font-title-md hover:underline">ثبت نظر جدید</button>
+</div>
+<div class="space-y-lg">
+<div class="border-b border-outline-variant/20 pb-lg">
+<div class="flex items-center gap-md mb-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary font-bold">س.م</div>
+<div>
+<h4 class="font-title-md text-on-surface">سارا محمدی</h4>
+<div class="flex gap-xs">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div></div></div></div></div></section></div></div></main></body></html>

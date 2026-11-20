@@ -20,6 +20,12 @@ Preserve the Next.js App Router + TypeScript + Tailwind frontend (`src/app/`) an
 - For simple terminal checks, give the developer scoped commands instead of expensive analysis. Report checks actually run, deferred checks, and limitations; never claim unperformed validation.
 - These role files are references, not automatically activated agents. Load only the role file(s) relevant to the task. Do not configure experimental multi-agent execution or external tools.
 
+## Git branch policy
+
+- Before making the first change for a new task, check the current branch. Start or reuse a branch dedicated to that task. Use a descriptive prefix such as `feature/`, `fix/`, `docs/`, or `chore/`, as appropriate.
+- Do not implement or commit new task work directly on the default branch (`master` in this repository, or `main` if renamed). If you are on the default branch or a branch for an unrelated task, switch to the appropriate task branch before editing.
+- In Review and Plan, inspect the current branch without changing it. Create or switch branches when implementation begins.
+
 ## User-controlled workflow stages
 
 - The user names the active stage in their prompt. Carry it across turns until the user changes it. The user may select any stage directly. Stages have no required order or prerequisites. Finishing one stage does not activate another. If no stage has been established and the request needs one, ask which stage applies before taking stage-specific action.
@@ -42,6 +48,10 @@ Keep work clean, maintainable, and aligned with established project conventions 
 | Scope, requirements, acceptance criteria | [Product owner](agents/product-owner.md) |
 | Architecture, boundaries, API contracts | [Software architect](agents/software-architect.md) |
 | Next.js UI and API integration | [Frontend engineer](agents/frontend-engineer.md) |
+| Color tokens, variants, or color consistency checks | [Color system](agents/color-system.md) |
+| Typography, spacing, sizing, shape, or effects tokens | [Foundation tokens](agents/foundation-tokens.md) |
+| Breakpoints, responsive grid, or layout contracts | [Responsive layout](agents/responsive-layout.md) |
+| Base App Components, UI layer boundaries, or component preview coverage | [Base App Components](agents/app-components.md) |
 | Django APIs, domain logic, persistence | [Backend engineer](agents/backend-engineer.md) |
 | RTL flows, visual design, accessibility | [UI/UX designer](agents/ui-ux-designer.md) |
 | Infrastructure, configuration, delivery | [DevOps engineer](agents/devops-engineer.md) |

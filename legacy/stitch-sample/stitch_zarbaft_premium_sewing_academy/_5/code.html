@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#e6eeff",
+                    "outline-variant": "#e3bdbf",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary-fixed-variant": "#920029",
+                    "surface-container-low": "#eff4ff",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#d5e3fc",
+                    "on-surface-variant": "#5b4041",
+                    "primary": "#95002a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error-container": "#93000a",
+                    "outline": "#8f6f70",
+                    "secondary": "#565e74",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dce9ff",
+                    "on-background": "#0d1c2e",
+                    "on-tertiary-container": "#d8dce0",
+                    "secondary-container": "#dae2fd",
+                    "tertiary-fixed": "#dfe3e7",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "primary-container": "#be123c",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d5e3fc",
+                    "tertiary": "#44494d",
+                    "inverse-primary": "#ffb2b7",
+                    "secondary-fixed": "#dae2fd",
+                    "tertiary-fixed-dim": "#c3c7cb",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "surface-tint": "#bb0f3a",
+                    "surface-dim": "#ccdbf3",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9ff",
+                    "inverse-surface": "#233144",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdadb",
+                    "on-tertiary-fixed": "#171c1f",
+                    "on-surface": "#0d1c2e",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#ffd0d2",
+                    "tertiary-container": "#5c6164",
+                    "on-primary-fixed": "#40000d",
+                    "on-secondary-fixed": "#131b2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "lg": "40px",
+                    "gutter": "24px",
+                    "sidebar-width": "280px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Geist"],
+                    "body-lg": ["Inter"],
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .lux-shadow { box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05); }
+        .rtl-clip { clip-path: polygon(100% 0, 0 0, 0 100%, 8% 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">Dookht Academy</span>
+</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex flex-row-reverse items-center gap-xl font-title-md text-title-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">دوره ها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">الگوها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">کارگاه ها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">درباره ما</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-secondary font-label-md px-4 py-2 hover:opacity-80 transition-all duration-200">جستجو</button>
+<button class="bg-primary text-white font-label-md px-6 py-2.5 rounded-lg active:scale-95 transition-transform">ورود / عضویت</button>
+</div>
+</div>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="relative px-gutter py-xl overflow-hidden">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 items-center gap-xl">
+<!-- Content -->
+<div class="z-10 text-right space-y-md">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>آموزش حرفه‌ای و مدرن خیاطی</span>
+</div>
+<h1 class="font-display-lg text-display-lg leading-tight text-on-background">
+                        هنر خیاطی را با <span class="text-primary">دقت یک مهندس</span> و ظرافت یک هنرمند بیاموزید
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                        آکادمی دوخت تلفیقی از تجربه اساتید برجسته و تکنولوژی‌های روز دنیاست. ما به شما کمک می‌کنیم تا از یک علاقه‌مند به یک طراح و خیاط تراز اول تبدیل شوید.
+                    </p>
+<div class="flex flex-row-reverse gap-4 pt-4">
+<button class="bg-primary-container text-white px-10 py-4 rounded-xl font-title-md shadow-lg hover:shadow-xl transition-all active:scale-95">
+                            مشاهده دوره‌های برتر
+                        </button>
+<button class="bg-surface-container-high text-on-background px-10 py-4 rounded-xl font-title-md border border-outline-variant/20 hover:bg-surface-container-highest transition-all">
+                            مشاوره رایگان
+                        </button>
+</div>
+</div>
+<!-- Hero Image Area -->
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative rounded-2xl overflow-hidden lux-shadow border border-white">
+<img class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A high-end, minimalist sewing atelier scene. A beautiful, high-quality sewing machine sits on a clean white oak table. Soft daylight flows into the minimalist studio, illuminating fine silk fabrics in deep red and cream. The aesthetic is extremely clean, professional, and premium, following a light-mode color palette with sharp focus on craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnO8NfwetzbjDcfhaqfMWDOt8aRWet746tNkpRICnAZByuSOjRaWtf0T8wyyZSZIVR_UBEz3z-zAp2FFHbSqffgQxkjuJ6blLNcjEOqPtPuH8j0IAY8xWCaelt3SfX5YE1-ylRYf1GcAlbDO0aAt33LIsjLDTktQbMq3-VRSWeBkCUcb2ryFw8rtpW5vwUH94DYYb8iYSQ5-tVtB0lvXTeAw4tWPo1Za1vgRhZYytArO1gOhRv5TtOLVT6O05S6vaZJY61fy000A0"/>
+<div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-outline-variant/30 lux-shadow max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<div class="flex -space-x-2 flex-row-reverse">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-dim"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-variant"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary-fixed"></div>
+</div>
+<span class="text-primary font-bold font-label-md">+۱۲۰۰ هنرجو</span>
+</div>
+<p class="text-secondary font-label-sm">هنرجویان فعال در این ماه به آکادمی پیوستند</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="bg-white py-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-background">چرا آکادمی دوخت؟</h2>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4">اساتید بین‌المللی</h3>
+<p class="text-secondary font-body-md">بهره‌مندی از تجربیات اساتیدی که در بازارهای جهانی مد و لباس فعالیت دارند.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[32px]">architecture</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4">الگوهای دقیق مهندسی</h3>
+<p class="text-secondary font-body-md">دسترسی به دقیق‌ترین الگوهای دیجیتالی که خروجی بی‌نقصی در دوخت به شما می‌دهند.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4">هوش مصنوعی دوخت</h3>
+<p class="text-secondary font-body-md">دستیار هوشمند شما در اندازه‌گیری، چیدمان الگو و رفع اشکالات دوخت به صورت ۲۴ ساعته.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Grid -->
+<section class="py-xl bg-surface-bright">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-row-reverse justify-between items-end mb-xl">
+<div class="text-right">
+<h2 class="font-headline-lg text-headline-lg text-on-background">دوره‌های محبوب</h2>
+<p class="text-secondary font-body-md">یادگیری را از همین امروز با بهترین‌های ما شروع کنید</p>
+</div>
+<a class="text-primary font-bold font-title-md flex items-center gap-2 group" href="#">
+                        مشاهده همه
+                        <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+</a>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Course Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 lux-shadow group">
+<div class="relative h-60 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up high-fidelity photography of professional pattern making. A person is using a silver tracing wheel on white luxury fabric. Red pins and a wooden tailor's ruler are visible. Minimalist aesthetic with soft focus background. High-key lighting, bright and modern studio vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxBUC4fjFwfX3J8ihONcuNgR71C_YH69TgKec_wOh95UYZAyqxW0NbMpz2xskVPFLWiZ5wk9IsY9PysTD37iQo3M-GJ6NO-LmEoOgHN0HZEUoCANJ2xiV8JecJwgVFaXQ5HXrV_8CET9CpxYvHz4lkn5bk8deiil-9HuSCWNrwDlsd4UAbvfRr8F13Zd3gbHUGZvlxNUTgKb-iiJpZoyYtcKN1Aii-uYvpw5oPKV9IaE21cwB1x3N73muxONdnQv8Pu2_17WpTWKQ"/>
+<div class="absolute top-4 left-4 bg-primary text-white font-label-sm px-3 py-1 rounded-full">ویژه</div>
+</div>
+<div class="p-6 text-right">
+<div class="flex flex-row-reverse justify-between mb-2">
+<span class="text-primary font-bold font-label-md">دوره مقدماتی</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="font-label-sm">۴.۹</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md mb-3 group-hover:text-primary transition-colors">اصول و مبانی خیاطی مدرن (نازک‌دوزی)</h3>
+<div class="flex flex-row-reverse items-center gap-4 text-secondary font-label-sm mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">timer</span> ۴۵ ساعت</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">group</span> ۳۲۰ هنرجو</span>
+</div>
+<div class="flex flex-row-reverse justify-between items-center border-t border-outline-variant/10 pt-4">
+<span class="text-on-background font-bold font-title-md">۳,۲۰۰,۰۰۰ تومان</span>
+<button class="text-primary font-bold font-label-md">جزئیات دوره</button>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 lux-shadow group">
+<div class="relative h-60 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Macro shot of high-end tailoring details. A professional hand is stitching a dark red velvet blazer with a silver needle. The lighting is elegant, highlighting the texture of the fabric. Studio lighting, minimalist white environment, luxury fashion school vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvOhdWzjiSdBo96nl1r11MccN6HZV-99vGYwjaQYYK7QfgeKkCErrTzFiFD3bT2qbdRdd7p_ATwzheJB9kUmu0RdOxGgBdfb4WMrX97PuCIZkEpjvjqO5IZ7Adm756UTOB8NH7Ifayc6xWSj4lWYp3SEB78yV_ppFMYadJWPOI2k6aYQQdYePCXS95eWXo-EQVV5oAreA7Bj1S5X6muoO7JWmv4xQoe1J5_IyH34sQ6Asjfma8ZCigSpccleW2BX54B1JHLDoS7TM"/>
+<div class="absolute top-4 left-4 bg-surface-variant text-primary font-label-sm px-3 py-1 rounded-full">متوسط</div>
+</div>
+<div class="p-6 text-right">
+<div class="flex flex-row-reverse justify-between mb-2">
+<span class="text-primary font-bold font-label-md">دوره تخصصی</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="font-label-sm">۵.۰</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md mb-3 group-hover:text-primary transition-colors">طراحی و دوخت کت و شلوار زنانه</h3>
+<div class="flex flex-row-reverse items-center gap-4 text-secondary font-label-sm mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">timer</span> ۶۰ ساعت</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">group</span> ۱۵۰ هنرجو</span>
+</div>
+<div class="flex flex-row-reverse justify-between items-center border-t border-outline-variant/10 pt-4">
+<span class="text-on-background font-bold font-title-md">۵,۸۰۰,۰۰۰ تومان</span>
+<button class="text-primary font-bold font-label-md">جزئیات دوره</button>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant/20 hover:-translate-y-2 transition-all duration-300 lux-shadow group">
+<div class="relative h-60 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-fashion wedding dress on a mannequin in a bright white minimalist atelier. Intricate lace details and silver embroidery. Professional lighting creating soft shadows. The overall mood is ethereal, high-end, and prestigious. Modern clean aesthetic with 2026 digital arts feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3AA-BQsPCdhLLoxp1MFMkLao7Y-MvUyo5PNi2Bu9L8VcRqGZ_uq89qwHZjXVHTbaJzdQHoehbJ-_PKqSKJfyIF6sPdi1Rd8vlqvTWloaHAJSUwDz0AO-tThAhH08XmAIn6xfdAW1uFZ0nj5jlL0j8c90mrC3IUiCejUJ0pEEb6Y0hPgvZynN4KSyShPRpcTtt524BG4h1z31aNQ8A1e655sZIBNkzSVR4l2rYZEONZM_npRPM2SHS_ghvZe1TfUcIdxxBD0aIzg"/>
+<div class="absolute top-4 left-4 bg-primary text-white font-label-sm px-3 py-1 rounded-full">پیشرفته</div>
+</div>
+<div class="p-6 text-right">
+<div class="flex flex-row-reverse justify-between mb-2">
+<span class="text-primary font-bold font-label-md">دوره تخصصی</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="font-label-sm">۴.۸</span>
+<span class="material-symbols-outlined text-[16px] text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md mb-3 group-hover:text-primary transition-colors">ژورنال‌شناسی و دوخت لباس شب</h3>
+<div class="flex flex-row-reverse items-center gap-4 text-secondary font-label-sm mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">timer</span> ۸۰ ساعت</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">group</span> ۸۵ هنرجو</span>
+</div>
+<div class="flex flex-row-reverse justify-between items-center border-t border-outline-variant/10 pt-4">
+<span class="text-on-background font-bold font-title-md">۸,۴۰۰,۰۰۰ تومان</span>
+<button class="text-primary font-bold font-label-md">جزئیات دوره</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Atelier AI Section -->
+<section class="py-xl relative overflow-hidden bg-inverse-surface text-white">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1 flex justify-center">
+<div class="relative w-80 h-80 bg-gradient-to-tr from-primary to-primary-container rounded-full animate-pulse blur-3xl opacity-20 absolute"></div>
+<div class="relative bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-3xl lux-shadow w-full max-w-md">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white">smart_toy</span>
+</div>
+<div>
+<h4 class="font-title-md">Tailor AI</h4>
+<span class="text-white/60 font-label-sm">دستیار هوشمند شما</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white/10 p-4 rounded-2xl rounded-tr-none text-right font-body-md">
+                                سلام! چطور می‌توانم در طراحی الگوی یقه انگلیسی به شما کمک کنم؟
+                            </div>
+<div class="bg-primary/20 p-4 rounded-2xl rounded-tl-none text-left font-label-md">
+<code class="font-label-md text-primary-fixed">Measurements: Bust 92cm, Waist 74cm...</code>
+</div>
+<div class="bg-white/10 p-4 rounded-2xl rounded-tr-none text-right font-body-md">
+                                بر اساس اندازه‌های شما، پیشنهاد می‌دهم پهنای یقه را ۷.۵ سانتی‌متر در نظر بگیرید.
+                            </div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 text-right space-y-md">
+<h2 class="font-display-lg text-display-lg">هوش مصنوعی در خدمت <span class="text-primary-fixed">هنر دست</span></h2>
+<p class="font-body-lg text-white/70">
+                        برای اولین بار در ایران، آکادمی دوخت از پلتفرم اختصاصی هوشمند خود رونمایی کرد. دستیار ما در تمامی مراحل از کشیدن الگو تا چیدمان بهینه پارچه و رفع اشکالات دوخت در کنار شماست.
+                    </p>
+<ul class="space-y-4 font-body-md text-white/80">
+<li class="flex flex-row-reverse items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            تبدیل عکس لباس به الگوی اولیه
+                        </li>
+<li class="flex flex-row-reverse items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            محاسبه دقیق میزان پارچه مورد نیاز
+                        </li>
+<li class="flex flex-row-reverse items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            پاسخگویی به سوالات فنی به صورت آنی
+                        </li>
+</ul>
+<button class="mt-4 bg-white text-primary font-bold px-8 py-3 rounded-xl hover:bg-primary-fixed transition-colors">
+                        تجربه هوش مصنوعی
+                    </button>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg">نظرات متخصصین</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-md">
+<div class="p-md bg-surface-container-low rounded-2xl border border-outline-variant/10 text-right italic">
+<div class="flex flex-row-reverse items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim"></div>
+<div>
+<h5 class="font-title-md not-italic">مریم سهرابی</h5>
+<span class="text-primary font-label-sm not-italic">طراح لباس عروس</span>
+</div>
+</div>
+<p class="text-secondary font-body-md">"دوره‌های آکادمی دوخت دیدگاه من را نسبت به استانداردسازی تغییر داد. الگوهای دیجیتال این مجموعه بی‌نظیر هستند."</p>
+</div>
+<div class="p-md bg-surface-container-low rounded-2xl border border-outline-variant/10 text-right italic">
+<div class="flex flex-row-reverse items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim"></div>
+<div>
+<h5 class="font-title-md not-italic">رضا احمدی</h5>
+<span class="text-primary font-label-sm not-italic">خیاط شخصی‌دوز</span>
+</div>
+</div>
+<p class="text-secondary font-body-md">"استفاده از دستیار هوشمند در حین کار، سرعت و دقت خروجی کارگاه من را تا ۳۰ درصد افزایش داده است."</p>
+</div>
+<div class="p-md bg-surface-container-low rounded-2xl border border-outline-variant/10 text-right italic">
+<div class="flex flex-row-reverse items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-dim"></div>
+<div>
+<h5 class="font-title-md not-italic">سارا محسنی</h5>
+<span class="text-primary font-label-sm not-italic">مدیر مزون سارا</span>
+</div>
+</div>
+<p class="text-secondary font-body-md">"آموزش‌های این پلتفرم از نظر کیفیت محتوا و فیلم‌برداری با بهترین نمونه‌های خارجی برابری می‌کند."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row-reverse justify-between items-start gap-md px-gutter py-lg max-w-container-max mx-auto">
+<!-- Brand & Bio -->
+<div class="md:w-1/3 text-right">
+<span class="font-headline-lg text-headline-lg text-primary block mb-4">Dookht Academy</span>
+<p class="text-secondary font-body-md leading-relaxed">
+                    پیشرو در ارائه آموزش‌های نوین صنعت پوشاک و مد در ایران. هدف ما توانمندسازی هنرمندان ایرانی با ابزارهای مدرن است.
+                </p>
+<div class="flex flex-row-reverse gap-4 mt-6">
+<a class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><i class="ph ph-instagram-logo text-xl"></i></a>
+<a class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><i class="ph ph-telegram-logo text-xl"></i></a>
+<a class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><i class="ph ph-linkedin-logo text-xl"></i></a>
+</div>
+</div>
+<!-- Links -->
+<div class="grid grid-cols-2 gap-xl md:w-1/2 text-right">
+<div>
+<h6 class="font-title-md text-primary mb-6">دسترسی سریع</h6>
+<ul class="space-y-3 font-body-md">
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">تماس با ما</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">قوانین و مقررات</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">سوالات متداول</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">فرصت های شغلی</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-title-md text-primary mb-6">خدمات ما</h6>
+<ul class="space-y-3 font-body-md">
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">خرید الگو</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">سفارش دوخت</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">پنل همکاری</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors" href="#">مجله مد</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-6 border-t border-outline-variant/10 text-center text-secondary font-label-md">
+            © ۲۰۲۶ آکادمی دوخت. تمامی حقوق محفوظ است.
+        </div>
+</footer>
+<!-- Tailor AI Floating Action -->
+<div class="fixed bottom-8 left-8 z-40 group">
+<button class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+</button>
+<div class="absolute bottom-20 left-0 bg-white p-4 rounded-2xl border border-outline-variant/20 shadow-2xl opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all w-64 text-right">
+<p class="font-title-md text-primary mb-2">Tailor AI آنلاین است</p>
+<p class="text-secondary font-label-md mb-4">آیا برای شروع پروژه جدید نیاز به راهنمایی دارید؟</p>
+<button class="w-full bg-surface-container-high text-primary py-2 rounded-lg font-bold">شروع گفتگو</button>
+</div>
+</div>
+<script>
+        // Simple micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                let ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+    </script>
+</body></html>

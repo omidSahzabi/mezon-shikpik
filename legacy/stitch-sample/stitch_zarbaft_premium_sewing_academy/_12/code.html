@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #f8f9ff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e6eeff;
+            border-radius: 10px;
+        }
+
+        .setting-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .setting-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom-color: #95002a !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#0d1c2e",
+                      "surface-container-high": "#dce9ff",
+                      "on-secondary-fixed": "#131b2e",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f8f9ff",
+                      "surface-container": "#e6eeff",
+                      "outline-variant": "#e3bdbf",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#dfe3e7",
+                      "tertiary-container": "#5c6164",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "on-secondary-container": "#5c647a",
+                      "on-tertiary-container": "#d8dce0",
+                      "surface-container-highest": "#d5e3fc",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "inverse-surface": "#233144",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#ffd0d2",
+                      "on-tertiary-fixed": "#171c1f",
+                      "secondary-container": "#dae2fd",
+                      "primary-container": "#be123c",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#ffb2b7",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "primary": "#95002a",
+                      "surface-tint": "#bb0f3a",
+                      "surface-container-low": "#eff4ff",
+                      "surface-bright": "#f8f9ff",
+                      "surface-dim": "#ccdbf3",
+                      "secondary": "#565e74",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "secondary-fixed": "#dae2fd",
+                      "outline": "#8f6f70",
+                      "on-background": "#0d1c2e",
+                      "tertiary": "#44494d",
+                      "background": "#f8f9ff",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "on-primary-fixed": "#40000d",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "inverse-on-surface": "#eaf1ff",
+                      "primary-fixed": "#ffdadb",
+                      "surface-variant": "#d5e3fc",
+                      "on-surface-variant": "#5b4041",
+                      "on-primary-fixed-variant": "#920029"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "64px",
+                      "gutter": "24px",
+                      "lg": "40px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "sidebar-width": "280px",
+                      "container-max": "1280px",
+                      "sm": "12px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "title-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Geist"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Geist"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface rtl">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-header border-b border-outline-variant/30 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">Dookht Academy</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<nav class="flex flex-row-reverse gap-6 font-title-md text-title-md">
+<a class="text-secondary hover:text-primary transition-colors" href="#">دوره ها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">الگوها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">کارگاه ها</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">درباره ما</a>
+</nav>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-label-md hover:opacity-80 transition-all active:scale-95">
+                ورود / عضویت
+            </button>
+</div>
+</header>
+<!-- Sidebar & Main Content Wrapper -->
+<div class="flex flex-row-reverse pt-20 min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed right-0 top-0 h-screen w-sidebar-width bg-surface-container-low border-l border-outline-variant/20 shadow-md pt-24 hidden md:flex flex-col rtl">
+<div class="px-6 mb-8">
+<div class="flex flex-row-reverse items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A professional high-end studio portrait of a middle-aged Persian woman with a creative and sophisticated look. She is wearing a modern tailored linen outfit in soft beige colors. The background is a minimalist design studio with soft ambient natural lighting coming from the side. The overall aesthetic is premium, clean, and professional, reflecting the high-fidelity branding of a luxury fashion academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd88BnfJNFzt-6zBvsPZFi4N46Bmn7TjBwWpwC8eI10Ra9NZMtROpSFmVLHCrbJQ2TLGANq97W8uUxvm-VlRXL72hSdjtwEfVtI9VxTYG-_MhQKuCY4G-KQdkAlWjy5Jg_IajyD-50ZdMXrrrRW5Ltiu3waiFnl0TOY2lJpIE9qWjTnPa_u09wwCS8k5bmKhgUoftN4usSMeH_tiX8lX7IhCwSPpZbVbVpME5mzJiRjoWgbW_Gp9opN6GGsqV-VSuTr0iDM1Ll-sE"/>
+</div>
+<div class="text-right">
+<h3 class="font-title-md text-on-surface">پنل کاربری</h3>
+<p class="text-secondary text-label-sm">خوش آمدید</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col flex-1 overflow-y-auto">
+<a class="flex flex-row-reverse items-center gap-3 text-secondary px-6 py-4 hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md">میز کار</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-secondary px-6 py-4 hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md">دوره های من</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-secondary px-6 py-4 hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-label-md">الگوهای خریداری شده</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-secondary px-6 py-4 hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md">پیام ها</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 bg-surface-container-high text-primary border-r-4 border-primary px-6 py-4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-md">تنظیمات</span>
+</a>
+</nav>
+<div class="p-6 border-t border-outline-variant/10">
+<a class="flex flex-row-reverse items-center gap-3 text-error hover:bg-error-container/20 px-4 py-3 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md">خروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:mr-sidebar-width px-gutter py-lg max-w-5xl mx-auto w-full">
+<header class="mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">تنظیمات حساب کاربری</h1>
+<p class="text-body-md text-secondary">مدیریت اطلاعات شخصی، امنیت و اطلاع‌رسانی‌ها</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Vertical Tabs (Desktop) / Quick Nav -->
+<nav class="lg:col-span-3 flex flex-col gap-2">
+<button class="text-right px-4 py-3 rounded-xl bg-white border border-outline-variant/10 shadow-sm text-primary font-medium hover:bg-surface-container transition-all flex items-center justify-between" onclick="scrollToSection('profile-section')">
+<span>ویرایش پروفایل</span>
+<span class="material-symbols-outlined text-sm">person</span>
+</button>
+<button class="text-right px-4 py-3 rounded-xl text-secondary hover:bg-surface-container transition-all flex items-center justify-between" onclick="scrollToSection('security-section')">
+<span>امنیت حساب</span>
+<span class="material-symbols-outlined text-sm">shield</span>
+</button>
+<button class="text-right px-4 py-3 rounded-xl text-secondary hover:bg-surface-container transition-all flex items-center justify-between" onclick="scrollToSection('notif-section')">
+<span>اطلاع‌رسانی‌ها</span>
+<span class="material-symbols-outlined text-sm">notifications</span>
+</button>
+</nav>
+<!-- Settings Forms -->
+<div class="lg:col-span-9 space-y-xl">
+<!-- Section: Edit Profile -->
+<section class="setting-card bg-white rounded-xl border border-outline-variant/20 p-md" id="profile-section">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-title-md text-on-surface">ویرایش پروفایل</h2>
+<span class="material-symbols-outlined text-secondary">edit_square</span>
+</div>
+<div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+<!-- Avatar Upload -->
+<div class="flex flex-col items-center gap-4">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-container">
+<img class="w-full h-full object-cover" data-alt="A crisp and elegant close-up of a high-quality sewing mannequin dressed in a partially finished couture gown. The setting is a professional sunlit atelier with rolls of fine fabrics like silk and velvet visible in the blurred background. The lighting is warm and inspiring, showcasing the textures of the fabric and the precision of the stitching, aligning with a premium minimalist SaaS brand for fashion creators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDAMEMyUZRq0Sb4O03aZv044GmsIad0NrhTKDU6RG0TulEk1qQZaAXkdHdwrUiwIzV4cGyDFks4jU9b22DEdtHkanZN8VZj3dH4Oy8WoWS2s1iMAmQhkwMBvY7cbbSfUMiVz2_SxAybXAL8jNhtl0a9gqQLwNheq7R8Y1a2YE8KyFUx5Ncz_eVW-lLOo3_27gDmwSCgi1-E_g5DIzKLpUqcjEqmYhlVp2ANM5bpg7jIMyR6gC8d9LiKgavNo7X1SjpPPG8beM40WQ"/>
+</div>
+<button class="absolute bottom-1 left-1 bg-primary text-on-primary p-2 rounded-full shadow-lg scale-90 opacity-0 group-hover:opacity-100 transition-all active:scale-75">
+<span class="material-symbols-outlined">photo_camera</span>
+</button>
+</div>
+<p class="text-label-sm text-secondary">تغییر تصویر پروفایل</p>
+</div>
+<!-- Fields -->
+<div class="flex-1 w-full space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant text-right">نام و نام خانوادگی</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/20 px-0 py-2 text-on-surface transition-all focus:bg-white" type="text" value="سارا احمدی"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant text-right">عنوان هنری</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/20 px-0 py-2 text-on-surface transition-all focus:bg-white" placeholder="طراح لباس شب" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant text-right">درباره من (بیوگرافی)</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/20 px-0 py-2 text-on-surface transition-all focus:bg-white resize-none" rows="3">علاقه‌مند به تکنیک‌های نوین دوخت و طراحی الگوهای مدرن. مدرس کارگاه‌های تخصصی در آکادمی دوخت.</textarea>
+</div>
+<div class="flex justify-start">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-label-md hover:opacity-90 active:scale-95 transition-all">ذخیره تغییرات</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Account Security -->
+<section class="setting-card bg-white rounded-xl border border-outline-variant/20 p-md" id="security-section">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-title-md text-on-surface">امنیت حساب</h2>
+<span class="material-symbols-outlined text-secondary">security</span>
+</div>
+<div class="space-y-8">
+<!-- Mobile Change with OTP -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex flex-col md:flex-row-reverse justify-between gap-4 mb-6">
+<div>
+<h3 class="font-label-md text-on-surface mb-1">شماره موبایل</h3>
+<p class="text-label-sm text-secondary">تأیید شده: ۰۹۱۲****۳۴۵</p>
+</div>
+<button class="text-primary font-medium hover:underline text-label-md" onclick="toggleOtpModal()">تغییر شماره</button>
+</div>
+<div class="flex flex-row-reverse items-center gap-4 p-4 bg-white rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<p class="text-label-sm text-on-secondary-container">تأیید دو مرحله‌ای فعال است. این امر امنیت حساب شما را افزایش می‌دهد.</p>
+</div>
+</div>
+<!-- Password/PIN Settings -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all cursor-pointer group">
+<div class="flex flex-row-reverse items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">password</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:translate-x-1 transition-transform">chevron_left</span>
+</div>
+<h3 class="font-label-md text-on-surface">تغییر رمز عبور</h3>
+<p class="text-label-sm text-secondary mt-1">آخرین تغییر: ۳ ماه پیش</p>
+</div>
+<div class="p-6 rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all cursor-pointer group">
+<div class="flex flex-row-reverse items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">pin</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:translate-x-1 transition-transform">chevron_left</span>
+</div>
+<h3 class="font-label-md text-on-surface">پین کد امنیتی</h3>
+<p class="text-label-sm text-secondary mt-1">تنظیم نشده است</p>
+</div>
+</div>
+<!-- Active Sessions -->
+<div class="space-y-4">
+<h3 class="font-label-md text-on-surface-variant">نشست‌های فعال</h3>
+<div class="space-y-3">
+<div class="flex flex-row-reverse items-center justify-between p-4 bg-white border border-outline-variant/10 rounded-xl">
+<div class="flex flex-row-reverse items-center gap-4">
+<span class="material-symbols-outlined text-primary">laptop_mac</span>
+<div class="text-right">
+<p class="font-label-md text-on-surface">مک‌بوک پرو - تهران، ایران</p>
+<p class="text-label-sm text-secondary">مرورگر کروم - فعلی</p>
+</div>
+</div>
+<span class="text-primary-container bg-primary/5 px-3 py-1 rounded-full text-label-sm">آنلاین</span>
+</div>
+<div class="flex flex-row-reverse items-center justify-between p-4 bg-white border border-outline-variant/10 rounded-xl">
+<div class="flex flex-row-reverse items-center gap-4">
+<span class="material-symbols-outlined text-secondary">smartphone</span>
+<div class="text-right">
+<p class="font-label-md text-on-surface">آیفون ۱۳ - اصفهان، ایران</p>
+<p class="text-label-sm text-secondary">اپلیکیشن دوخت - ۲ ساعت پیش</p>
+</div>
+</div>
+<button class="text-error hover:text-error-container text-label-sm font-medium">پایان نشست</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Notifications -->
+<section class="setting-card bg-white rounded-xl border border-outline-variant/20 p-md" id="notif-section">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-title-md text-on-surface">تنظیمات اطلاع‌رسانی</h2>
+<span class="material-symbols-outlined text-secondary">notifications_active</span>
+</div>
+<div class="space-y-6">
+<div class="flex flex-row-reverse items-center justify-between py-4 border-b border-outline-variant/10">
+<div>
+<h3 class="font-label-md text-on-surface">اعلان‌های سیستم</h3>
+<p class="text-label-sm text-secondary">دریافت پیام‌های مربوط به تراکنش‌ها و امنیت</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex flex-row-reverse items-center justify-between py-4 border-b border-outline-variant/10">
+<div>
+<h3 class="font-label-md text-on-surface">خبرنامه و پیشنهادات</h3>
+<p class="text-label-sm text-secondary">اطلاع از تخفیف‌ها و دوره‌های جدید</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex flex-row-reverse items-center justify-between py-4">
+<div>
+<h3 class="font-label-md text-on-surface">یادآوری تمرین‌ها</h3>
+<p class="text-label-sm text-secondary">یادآوری برای تکمیل مراحل دوره‌های در حال یادگیری</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<!-- OTP Verification Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4" id="otp-modal">
+<div class="absolute inset-0 bg-on-surface/40 backdrop-blur-sm" onclick="toggleOtpModal()"></div>
+<div class="relative bg-white w-full max-w-md rounded-2xl p-8 shadow-2xl animate-in fade-in zoom-in duration-300">
+<div class="flex justify-between items-start mb-6">
+<button class="text-secondary hover:text-on-surface transition-colors" onclick="toggleOtpModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="text-right">
+<h2 class="font-title-md text-on-surface">تغییر شماره همراه</h2>
+<p class="text-label-sm text-secondary mt-1">کد تأیید به شماره جدید ارسال خواهد شد</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant text-right">شماره موبایل جدید</label>
+<input class="w-full text-left font-label-md tracking-widest bg-surface-container-low border-0 border-b-2 border-outline-variant/20 px-0 py-3 text-on-surface transition-all focus:bg-white" placeholder="۰۹*********" type="tel"/>
+</div>
+<div class="flex flex-col items-center gap-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-md hover:opacity-90 active:scale-95 transition-all">ارسال کد تأیید</button>
+<p class="text-label-sm text-outline">یک پیامک حاوی کد ۶ رقمی دریافت خواهید کرد.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-xl border-t border-outline-variant/30 bg-surface-container-lowest py-lg px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row-reverse justify-between items-start gap-md">
+<div class="space-y-4 text-right">
+<div class="font-headline-lg text-headline-lg text-primary">Dookht Academy</div>
+<p class="text-body-md text-secondary max-w-sm">مرجع آموزش‌های تخصصی خیاطی، طراحی لباس و الگوسازی مدرن در ایران.</p>
+</div>
+<div class="grid grid-cols-2 gap-xl">
+<div class="space-y-4">
+<h4 class="font-title-md text-on-surface">آکادمی</h4>
+<nav class="flex flex-col gap-2 font-body-md">
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">تماس با ما</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">قوانین و مقررات</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-title-md text-on-surface">پشتیبانی</h4>
+<nav class="flex flex-col gap-2 font-body-md">
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">سوالات متداول</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">فرصت های شغلی</a>
+</nav>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto border-t border-outline-variant/10 mt-8 pt-8 text-center text-label-sm text-secondary">
+            © ۲۰۲۶ آکادمی دوخت. تمامی حقوق محفوظ است.
+        </div>
+</footer>
+<!-- Tailor AI (Floating Action Button) -->
+<div class="fixed bottom-6 left-6 z-50">
+<button class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container shadow-xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all group overflow-hidden">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+</div>
+<script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = element.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Update active state in nav
+            document.querySelectorAll('nav.lg\\:col-span-3 button').forEach(btn => {
+                btn.classList.remove('bg-white', 'shadow-sm', 'text-primary', 'font-medium');
+                btn.classList.add('text-secondary');
+            });
+            event.currentTarget.classList.add('bg-white', 'shadow-sm', 'text-primary', 'font-medium');
+            event.currentTarget.classList.remove('text-secondary');
+        }
+
+        function toggleOtpModal() {
+            const modal = document.getElementById('otp-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Interaction for Session Logout
+        document.querySelectorAll('button:contains("پایان نشست")').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.flex-row-reverse').style.opacity = '0.5';
+                this.innerHTML = 'درحال خروج...';
+            });
+        });
+    </script>
+</body></html>

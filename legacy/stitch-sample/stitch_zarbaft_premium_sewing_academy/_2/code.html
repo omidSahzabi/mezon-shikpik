@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>درباره ما | آکادمی دوخت</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdadb",
+                    "inverse-surface": "#233144",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-container": "#5c6164",
+                    "primary": "#95002a",
+                    "outline-variant": "#e3bdbf",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#c3c7cb",
+                    "surface-container-highest": "#d5e3fc",
+                    "surface-container": "#e6eeff",
+                    "primary-container": "#be123c",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-surface": "#0d1c2e",
+                    "on-primary-fixed-variant": "#920029",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed-dim": "#ffb2b7",
+                    "on-error": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#bb0f3a",
+                    "on-primary-fixed": "#40000d",
+                    "surface-container-high": "#dce9ff",
+                    "secondary-container": "#dae2fd",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "outline": "#8f6f70",
+                    "tertiary": "#44494d",
+                    "surface-dim": "#ccdbf3",
+                    "on-secondary-container": "#5c647a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#5b4041",
+                    "on-primary-container": "#ffd0d2",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#d8dce0",
+                    "inverse-primary": "#ffb2b7",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#dfe3e7",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#565e74",
+                    "on-tertiary-fixed": "#171c1f",
+                    "surface-variant": "#d5e3fc",
+                    "secondary-fixed": "#dae2fd",
+                    "on-background": "#0d1c2e",
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "sm": "12px",
+                    "sidebar-width": "280px",
+                    "lg": "40px",
+                    "base": "8px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Geist"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Geist"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Variable[wght].woff2') format('woff2');
+        }
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #95002a 0%, #be123c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 100ms; }
+        .stagger-2 { transition-delay: 200ms; }
+        .stagger-3 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">دوخت آکادمی</div>
+<nav class="hidden md:flex flex-row-reverse gap-lg items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-title-md text-title-md transition-all duration-200" href="#">درباره ما</a>
+<a class="text-on-surface-variant hover:text-primary font-title-md text-title-md transition-colors transition-all duration-200" href="#">کارگاه‌ها</a>
+<a class="text-on-surface-variant hover:text-primary font-title-md text-title-md transition-colors transition-all duration-200" href="#">الگوها</a>
+<a class="text-on-surface-variant hover:text-primary font-title-md text-title-md transition-colors transition-all duration-200" href="#">دوره‌ها</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-label-md text-label-md active:scale-95 transition-transform">ورود | ثبت‌نام</button>
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border-none rounded-full pr-10 pl-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 w-48 transition-all focus:w-64" placeholder="جستجو..." type="text"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<div class="lg:col-span-7 reveal">
+<span class="text-primary font-bold tracking-widest text-label-md mb-sm block">میراث و نوآوری</span>
+<h1 class="font-display-lg text-display-lg mb-md leading-tight">هنر دوخت را با <br/><span class="text-gradient">تکنولوژی ۲۰۲۶</span> بیاموزید</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        آکادمی دوخت با هدف پیوند زدن ظرافت‌های خیاطی سنتی به ابزارهای مدرن آموزشی، فضایی را برای رشد خلاقیت و مهارت‌های فنی طراحان فردا فراهم کرده است. ما معتقدیم هر کوک، داستانی برای گفتن دارد.
+                    </p>
+</div>
+<div class="lg:col-span-5 relative reveal stagger-1">
+<div class="aspect-square rounded-[2rem] overflow-hidden border-8 border-surface-container-lowest shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A professional fashion designer working in a minimalist high-end atelier. The room features white walls, clean lines, and soft ambient natural lighting. A sophisticated female designer is adjusting a premium silk fabric on a mannequin. The aesthetic is modern-premium with subtle red accents and a luxurious SaaS platform feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnyS85ZQUyK5tpOVT3tPD151s9L3nL7NZxvmklKB97IK8XtdbBwdYRlzLtWzrpNMxwSsJJoHkU_Wqgt8K5PzuIcJlBwRDArQIPItQ6WM_o_1lcu8OVPoZLSwfukNiYXgv1O46xxTfkZ6zsABQnFgoIpl3S7unn4bR3I39ZLVY_wEt9QDQGw7RHuo8xnRiSZB_HIA_nDKiB20SiZ5Xma18n5ULPlWJfcZrvfwuSRM0AytuPayT23yiPgxs4mDP31-hpUfZZvAWdbo"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary-container p-8 rounded-2xl shadow-lg hidden md:block">
+<span class="text-on-primary-container font-display-lg text-headline-lg block">۱۰+</span>
+<span class="text-on-primary-container/80 font-label-md">سال تجربه درخشان</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-lowest py-xl border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md text-center">
+<div class="reveal">
+<div class="text-primary font-display-lg text-display-lg mb-xs">۱۵k+</div>
+<div class="text-on-surface-variant font-label-md">هنرجوی فعال</div>
+</div>
+<div class="reveal stagger-1">
+<div class="text-primary font-display-lg text-display-lg mb-xs">۸۵</div>
+<div class="text-on-surface-variant font-label-md">دوره تخصصی</div>
+</div>
+<div class="reveal stagger-2">
+<div class="text-primary font-display-lg text-display-lg mb-xs">۱۲</div>
+<div class="text-on-surface-variant font-label-md">اساتید بین‌المللی</div>
+</div>
+<div class="reveal stagger-3">
+<div class="text-primary font-display-lg text-display-lg mb-xs">۴.۹</div>
+<div class="text-on-surface-variant font-label-md">رضایت هنرجویان</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission / Story Section (Bento Grid) -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="mb-lg reveal">
+<h2 class="font-headline-lg text-headline-lg">مسیر ما تا به امروز</h2>
+<div class="h-1 w-20 bg-primary mt-sm"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="md:col-span-2 bg-white p-lg rounded-3xl border border-outline-variant/30 shadow-sm reveal">
+<h3 class="font-title-md text-title-md mb-md text-primary">ماموریت ما</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-loose">
+                        ماموریت ما ساده است: دموکراتیزه کردن آموزش خیاطی سطح بالا. ما با استفاده از پلتفرم‌های هوشمند و متدهای آموزشی نوین، محدودیت‌های جغرافیایی را از میان برداشته‌ایم تا هر کسی، در هر کجا، بتواند به استانداردهای یک آتلیه پاریسی دست پیدا کند. تمرکز ما بر دقت، مهارت فنی و خلاقیت بی‌پایان است.
+                    </p>
+</div>
+<div class="bg-primary text-on-primary p-lg rounded-3xl reveal stagger-1 flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div>
+<h3 class="font-title-md text-title-md mb-xs">خلاقیت هوشمند</h3>
+<p class="font-label-md opacity-80">استفاده از هوش مصنوعی برای بهینه‌سازی الگوها و کاهش دورریز پارچه.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-lg rounded-3xl reveal stagger-2 flex flex-col justify-between border border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-primary">psychology</span>
+<div>
+<h3 class="font-title-md text-title-md mb-xs text-on-surface">یادگیری عمیق</h3>
+<p class="font-label-md text-on-surface-variant">بیش از ۵۰۰ ساعت محتوای ویدیویی با کیفیت 4K و پشتیبانی ۲۴ ساعته اساتید.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative h-64 rounded-3xl overflow-hidden reveal stagger-3">
+<img class="w-full h-full object-cover" data-alt="Close up of a high-end sewing machine stitching a detailed floral pattern onto premium red velvet fabric. The lighting is dramatic and moody, highlighting the texture of the thread and the metallic shine of the needle. Minimalist studio background with a focus on craftsmanship and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6g_oYsIzpuPFcmcEYR7eRhS1UQnDn4zdN-Ka6X-IeX7x21pc5cQcWBOICy6yyPbdekOj8ifj68rzzNhM8u_nMNtoM546eJW8QaEb9_MLQz71YC2BXAkZ7bdRChejoW461LBKBFfF-wbI_bsleiRK8mT9LXo1Jtx7kwhCu1mm1d_-izDp7fYb21GP7YJxXi5E9ZKm-3W3-WDhkOJhoV__eo3VReW_RAmA6So0Wr7gqqSpxlaBucApzLO1XLirwDGl1dPYUvjVuhu0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-lg">
+<p class="text-white font-title-md">دقت در هر میلی‌متر، زیبایی در هر کوک.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="text-center mb-xl reveal">
+<h2 class="font-headline-lg text-headline-lg">تیم رهبری ما</h2>
+<p class="text-on-surface-variant mt-xs">متخصصانی که آینده مد را می‌سازند</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Team Member 1 -->
+<div class="group reveal">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-md border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a sophisticated female founder of a fashion academy. She has a minimalist professional style, wearing a tailored cream blazer. She is standing in a bright, modern studio with rolls of luxury fabrics in the background. The mood is confident, elegant, and visionary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Mkj3rl4K0dHhx8s21qV0rxeF8c6iteovUAKdTVOg9t6lhtHPWvLCMvlAdoLhBsRLPCF741iNJ6PkvRoEqPk7zyy-ThcL0J-U1CeYll6qDGe30T6qHri6hxfJiqvrKBzl3Z6-owihzYkQrYKBzt0GOnOjmYshHtaXY1SroQRHMGaal4yqqv0tmMGN6CP6d56GNVZmZXyKeCBp1DGet897gCYVTo8_TnjfL3V9SMe6BUvbS3RXofGQzWzRkUrC7wW9QKrT7qhavKI"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-title-md text-title-md">سارا ابراهیمی</h4>
+<p class="text-primary font-label-md">موسس و مدیر خلاقیت</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group reveal stagger-1">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-md border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a male lead instructor in a fashion academy. He is wearing a dark, minimal turtleneck and glasses, looking intellectual and skilled. He is holding a measuring tape and looking at the camera with a friendly smile. The background is a clean white studio with sewing tools neatly arranged." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVise6chSSE--oJXh1a67EbMV0pAwbm5is7M2H0a0as7sy2dno7mmhlljdoiqQCLkXdwrzypgqzk0gYLyzZ_HePftL__ENmtkYp2DSVXVLibS7OgjxAY16s-lg0v53J6lCCACNRk8b44SCaN_xMtpV9zgCtHnZciZ6EhjdoBit0sFA_jo_mDC_j58NbC-no_Czub3HM4b_ZXh4Ly4XxerYxpjA5o950V1qRv7Y6Pg5OFH8xKuMnrAXU0_JSIoZKithO2k7XRyeoEo"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-title-md text-title-md">رضا راد</h4>
+<p class="text-primary font-label-md">مدیر آموزش و متدولوژی</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group reveal stagger-2">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-md border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a young female tech lead for a digital education platform. She is working on a high-end laptop with code visible on the screen. She is in a bright workspace with minimalist decor. Her style is modern and professional. The overall feel is tech-savvy and innovative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoKfEavBFCL03lVXQHK88I2d7DGDNFaIZaTPNe8CktQraqyFQCS2gQVCgHMcrUQN_qGNDR0SjCrKB6fAcPU0cZ9GOUiKrVALl32cVJP-o3MroTc893H0gJ9iSA3HcPsIffiI4Wjqo3H82XhwfrCQFhs7BsyH2KT6SO9MbLIttk8ks2qkW_psBMvizeR47OYeZn27kY1KYrQrIND1YKqJjDU3Q1drO73DB3BKwkNoOE1gQuWA69C6rhXQh3WRQxsOozciMzq78QWtk"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-title-md text-title-md">مینا کاظمی</h4>
+<p class="text-primary font-label-md">مدیر تکنولوژی آموزشی</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group reveal stagger-3">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-md border border-outline-variant/20">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a professional female student counselor at a premium academy. She is welcoming and friendly, sitting at a glass desk in a modern office. The lighting is soft and flattering. She represents the high-end customer service of the academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMhkFk6w2wVS8dE7ndXKDuKHkT3U9dlG2OAX3B41xCbXNPuATScjT3ZhlKnkCGpCnw2RWGEqWX8RBhV4r5ZPLoUYVUjENq2NJbqrqUJyDljdkerxr0jB8Lx-Q68ZYbgI1lIRPzGFuE-TcbOEuWIKwvRaCBB7-oUoIMkryAArH7Nb0kPZEFlLXwHdmoQ87WvTgwTt55vbd9bhixGLAmEmGgepVXaBp85dHbte92l-J9jAw818OLP9Tthkq0jC6wpsm7ZAjSuuyxSrc"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-title-md text-title-md">آیدا محمدی</h4>
+<p class="text-primary font-label-md">مدیر ارتباطات و پشتیبانی</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-xl">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-[2.5rem] p-xl text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-headline-lg mb-md">آماده‌اید داستان خود را بدوزید؟</h2>
+<p class="font-body-md text-body-md opacity-70 mb-lg max-w-xl mx-auto">همین امروز به جمع هزاران هنرجوی خلاق ما بپیوندید و اولین کوک را به سمت حرفه‌ای شدن بردارید.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<button class="bg-primary text-white px-lg py-3 rounded-full font-title-md hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20">مشاهده دوره‌ها</button>
+<button class="bg-white/10 text-white border border-white/20 px-lg py-3 rounded-full font-title-md hover:bg-white/20 transition-all active:scale-95 backdrop-blur-md">مشاوره رایگان</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center gap-md px-gutter py-xl max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary">دوخت آکادمی</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#">قوانین و مقررات</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#">تماس با ما</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#">سوالات متداول</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#">حریم خصوصی</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md">© ۲۰۲۶ تمامی حقوق برای آکادمی دوخت محفوظ است.</p>
+</div>
+</footer>
+<!-- Tailor AI Floating Button -->
+<button class="fixed bottom-gutter left-gutter w-16 h-16 bg-white rounded-full shadow-[0_10px_25px_-5px_rgba(15,23,42,0.1)] flex items-center justify-center text-primary hover:scale-110 transition-transform active:scale-90 border border-outline-variant/20 z-40" id="ai-trigger">
+<span class="material-symbols-outlined text-3xl">auto_fix_high</span>
+</button>
+<script>
+        // Simple scroll reveal observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Interactive Header Shrink
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

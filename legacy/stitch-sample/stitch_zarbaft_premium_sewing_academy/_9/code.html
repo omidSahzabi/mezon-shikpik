@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dookht Academy | جزئیات دوره</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #95002a;
+            --primary-container: #be123c;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #0d1c2e;
+        }
+
+        .font-plus { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-geist { font-family: 'Geist', sans-serif; }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .course-card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+        }
+
+        .sticky-nav-active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* Custom Scrollbar for Persian Layout */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-open .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-open .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#e6eeff",
+                      "outline-variant": "#e3bdbf",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-primary-fixed-variant": "#920029",
+                      "surface-container-low": "#eff4ff",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#d5e3fc",
+                      "on-surface-variant": "#5b4041",
+                      "primary": "#95002a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#5c647a",
+                      "on-error-container": "#93000a",
+                      "outline": "#8f6f70",
+                      "secondary": "#565e74",
+                      "surface": "#f8f9ff",
+                      "surface-container-high": "#dce9ff",
+                      "on-background": "#0d1c2e",
+                      "on-tertiary-container": "#d8dce0",
+                      "secondary-container": "#dae2fd",
+                      "tertiary-fixed": "#dfe3e7",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "primary-container": "#be123c",
+                      "background": "#f8f9ff",
+                      "surface-container-highest": "#d5e3fc",
+                      "tertiary": "#44494d",
+                      "inverse-primary": "#ffb2b7",
+                      "secondary-fixed": "#dae2fd",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "surface-tint": "#bb0f3a",
+                      "surface-dim": "#ccdbf3",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f8f9ff",
+                      "inverse-surface": "#233144",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#ffdadb",
+                      "on-tertiary-fixed": "#171c1f",
+                      "on-surface": "#0d1c2e",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#ffd0d2",
+                      "tertiary-container": "#5c6164",
+                      "on-primary-fixed": "#40000d",
+                      "on-secondary-fixed": "#131b2e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "lg": "40px",
+                      "gutter": "24px",
+                      "sidebar-width": "280px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "xl": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "label-sm": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "title-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">Dookht Academy</div>
+<nav class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="font-title-md text-title-md text-primary font-bold border-b-2 border-primary pb-1" href="#">دوره‌ها</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors" href="#">الگوها</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors" href="#">کارگاه‌ها</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors" href="#">درباره ما</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all">
+                    ورود / عضویت
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-xl max-w-container-max mx-auto px-gutter">
+<!-- Hero Section & Video Trailer -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-xl">
+<div class="lg:col-span-8">
+<nav class="flex items-center gap-2 text-secondary font-label-md text-label-md mb-4">
+<span>آموزش خیاطی</span>
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>دوره‌های پیشرفته</span>
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="text-primary">دوخت کت تک زنانه</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg mb-4">دوره جامع طراحی و دوخت کت تک کلاسیک</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-8 leading-relaxed max-w-2xl">
+                    در این دوره تخصصی، از صفر تا صد مراحل اندازه‌گیری، الگوسازی و دوخت یک کت زنانه با استانداردهای مزون‌دوزی را فرا خواهید گرفت.
+                </p>
+<!-- Premium Video Player Area -->
+<div class="relative group rounded-2xl overflow-hidden aspect-video bg-inverse-surface shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-end, professionally lit cinematography shot of a tailor's workbench. A dark red velvet fabric is being carefully pinned to a wooden mannequin. Soft golden ambient lighting illuminates fine threads and golden needles in the background. The aesthetic is luxurious, minimalist, and modern light-mode, with a focus on craftsmanship and premium quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSJhM23GB3zE7i-oWkQfcMZr_UrLcJdlrxUOjMa_3539jvg01CLiRy60jMGzBAShkoLwp7f561LY7JHOlf-2y_SmUS5wqS9bwQJzFbK5QG6pdJ2kzSLo7137DFUIav_nHkBcaYEC4xJGWJyqvyuoyRvZbYJARVzywPr2j38eJNDCrDs5Hf_eDigSCgk8lXO6wALqNIL3PxzKsWkXItObUddh_t6G1fue1mCps8l3MF6fJd3D8hGOzUb--cN1gbOIb5kfs97hDyr3w')">
+</div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all">
+<button class="w-20 h-20 bg-primary/90 text-white rounded-full flex items-center justify-center hover:scale-110 active:scale-90 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-6 right-6 left-6 flex justify-between items-center text-white">
+<span class="font-label-md text-label-md bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">پیش‌نمایش دوره (۳:۴۵)</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">fullscreen</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">volume_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Purchase Sidebar -->
+<aside class="lg:col-span-4">
+<div class="sticky top-28 bg-white rounded-2xl border border-outline-variant/30 p-6 course-card-shadow">
+<div class="flex justify-between items-start mb-6">
+<div class="flex flex-col">
+<span class="text-secondary font-label-sm text-label-sm line-through">۴,۲۰۰,۰۰۰ تومان</span>
+<span class="text-primary font-headline-lg text-headline-lg font-bold">۲,۸۵۰,۰۰۰ تومان</span>
+</div>
+<span class="bg-primary-fixed text-primary px-3 py-1 rounded-lg font-label-md text-label-md font-bold">۳۰٪ تخفیف</span>
+</div>
+<div class="flex flex-col gap-4 mb-8">
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md">دسترسی مادام‌العمر به محتوا</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-md text-label-md">ارائه گواهینامه معتبر آکادمی</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<span class="font-label-md text-label-md">پشتیبانی مستقیم توسط مدرس</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">download</span>
+<span class="font-label-md text-label-md">فایل‌های الگو آماده چاپ</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-xl font-title-md text-title-md font-bold shadow-lg hover:opacity-90 active:scale-95 transition-all mb-4">
+                        ثبت‌نام در دوره
+                    </button>
+<p class="text-center font-label-sm text-label-sm text-secondary">۷ روز ضمانت بازگشت وجه بی‌قید و شرط</p>
+<hr class="my-6 border-outline-variant/20"/>
+<div class="flex flex-col gap-3">
+<p class="font-label-md text-label-md font-bold">این دوره شامل:</p>
+<div class="grid grid-cols-2 gap-2 text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>۱۸ ساعت ویدیو</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>۱۲ فایل کمکی</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>۴ آزمون خودسنجی</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">incognito</span>
+<span>بروزرسانی دائمی</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<!-- Sticky Navigation Tab Bar -->
+<nav class="sticky top-[72px] z-40 bg-white/80 backdrop-blur-md border-b border-outline-variant/20 mb-8 -mx-gutter px-gutter overflow-x-auto" id="sticky-nav">
+<div class="flex flex-row-reverse gap-8 items-center h-16 max-w-container-max mx-auto whitespace-nowrap">
+<a class="font-title-md text-title-md text-primary font-bold border-b-2 border-primary h-full flex items-center px-2" href="#overview">معرفی دوره</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors h-full flex items-center px-2" href="#syllabus">برنامه آموزشی</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors h-full flex items-center px-2" href="#instructor">مدرس</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors h-full flex items-center px-2" href="#reviews">نظرات دانشجویان</a>
+<a class="font-title-md text-title-md text-secondary hover:text-primary transition-colors h-full flex items-center px-2" href="#faq">سوالات متداول</a>
+</div>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8">
+<!-- Overview Section -->
+<section class="mb-xl scroll-mt-32" id="overview">
+<h2 class="font-headline-lg text-headline-lg mb-6">درباره این دوره</h2>
+<div class="font-body-md text-body-md text-secondary space-y-4 leading-8 text-justify">
+<p>دوره «دوخت کت تک زنانه» برای افرادی طراحی شده است که اصول اولیه خیاطی را می‌دانند و اکنون به دنبال ارتقای مهارت‌های خود به سطح حرفه‌ای هستند. در این دوره، تمرکز اصلی ما بر روی تکنیک‌های «کت‌سازی» (Tailoring) است که تفاوت بین یک لباس معمولی و یک اثر هنری ماندگار را رقم می‌زند.</p>
+<p>ما با بررسی انواع پارچه‌های مناسب برای کت شروع می‌کنیم و سپس وارد دنیای پیچیده لایی‌کشی، دوخت آستر و فرم‌دهی به یقه انگلیسی می‌شویم. هر درس با کیفیت 4K فیلم‌برداری شده تا شما هیچ جزئیاتی را از دست ندهید.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<h3 class="font-title-md text-title-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                آنچه یاد می‌گیرید
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-secondary">
+<li>• مدلسازی تخصصی کت روی الگو</li>
+<li>• تکنیک‌های لایی‌کشی صنعتی و سنتی</li>
+<li>• دوخت جیب‌های فیلتابی و درب‌دار</li>
+<li>• اتصال صحیح آستر به بدنه (آسترکشی کامل)</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<h3 class="font-title-md text-title-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">priority_high</span>
+                                پیش‌نیازها
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-secondary">
+<li>• تسلط بر چرخ‌ خیاطی صنعتی</li>
+<li>• دانش پایه در مورد رسم الگوی پایه بالاتنه</li>
+<li>• صبر و دقت بالا برای اجرای جزئیات</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Syllabus Section -->
+<section class="mb-xl scroll-mt-32" id="syllabus">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-lg text-headline-lg">سرفصل‌های دوره</h2>
+<span class="font-label-md text-label-md text-secondary">۵ فصل • ۲۴ جلسه</span>
+</div>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<div class="border border-outline-variant/30 rounded-2xl bg-white overflow-hidden accordion-item">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-lg bg-primary-container text-white flex items-center justify-center font-bold">۱</span>
+<span class="font-title-md text-title-md">آماده‌سازی و شناخت متریال</span>
+</div>
+<div class="flex items-center gap-4 text-secondary">
+<span class="font-label-sm text-label-sm">۴ جلسه • ۶۵ دقیقه</span>
+<span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+</div>
+</button>
+<div class="accordion-content">
+<div class="p-5 border-t border-outline-variant/10 space-y-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">play_circle</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">انتخاب پارچه مناسب بر اساس فصل</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">۱۵:۲۰</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">play_circle</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">انواع لایی و کاربرد هر کدام در نقاط مختلف کت</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">۲۰:۱۰</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">lock</span>
+<span class="font-body-md text-body-md text-outline">ابزار مورد نیاز برای کت‌دوزی حرفه‌ای</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">۱۲:۴۵</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="border border-outline-variant/30 rounded-2xl bg-white overflow-hidden accordion-item accordion-open">
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-lg bg-primary-container text-white flex items-center justify-center font-bold">۲</span>
+<span class="font-title-md text-title-md">الگوسازی و برش</span>
+</div>
+<div class="flex items-center gap-4 text-secondary">
+<span class="font-label-sm text-label-sm">۶ جلسه • ۱۲۰ دقیقه</span>
+<span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+</div>
+</button>
+<div class="accordion-content" style="max-height: 500px;">
+<div class="p-5 border-t border-outline-variant/10 space-y-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-body-md text-body-md text-primary font-bold">تغییرات الگوی پایه برای تبدیل به کت</span>
+</div>
+<span class="bg-primary-fixed text-primary px-2 py-0.5 rounded text-[10px]">در حال پخش</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">lock</span>
+<span class="font-body-md text-body-md text-outline">طراحی یقه انگلیسی کلاسیک</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">۳۵:۰۰</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructor Section -->
+<section class="mb-xl scroll-mt-32" id="instructor">
+<h2 class="font-headline-lg text-headline-lg mb-8">مدرس دوره</h2>
+<div class="bg-white border border-outline-variant/30 rounded-3xl p-8 flex flex-col md:flex-row-reverse gap-8 items-center md:items-start">
+<div class="w-40 h-40 rounded-full overflow-hidden shrink-0 border-4 border-primary-fixed">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional portrait of a refined female fashion designer in her 40s. She has a warm smile and is wearing a masterfully tailored navy blue vest. The background is a blurred high-end sewing studio with mannequins and silk fabrics. The lighting is soft and flattering, creating a premium and trustworthy persona." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBef_cTuyHlhY8DMdqpUt8GMmasGiEA3h0IaacqHysyE7DWghmM3FeAjjttRFLxktnbi2cKOvtsw9HEsi6UzsOAOPJAvVRdVrPbgUMaX3B-41KF7Dz6XQZszFud8Us43hvyWLn6bj4zcDSk2aX7VwGOf7YIFHYSIPjydMjA8Q3mOiz0qDmcSeCAZL4LfSMQW397WljjSO-iUULVUsT9zFbrfRvyWGwmRhEDFjCcH0SNVof2__uAqtCknk5FDcOHxp9xEahrr0nCNNY')"></div>
+</div>
+<div class="flex-1 text-center md:text-right">
+<h3 class="font-headline-lg text-headline-lg mb-2">استاد مریم اسدی</h3>
+<p class="text-primary font-label-md text-label-md mb-4">طراح ارشد و متخصص تکنولوژی دوخت</p>
+<p class="font-body-md text-body-md text-secondary leading-8 mb-6">
+                                با بیش از ۱۵ سال سابقه فعالیت در بازارهای بین‌المللی و همکاری با برندهای مطرح، استاد اسدی تمام تجربیات خود را در قالب دوره‌های ویدیویی با بالاترین استاندارد آموزشی در اختیار شما قرار می‌دهد. ایشان تاکنون بیش از ۵۰۰۰ هنرجوی موفق را در سراسر جهان آموزش داده‌اند.
+                            </p>
+<div class="flex justify-center md:justify-start gap-8">
+<div>
+<p class="font-headline-lg text-headline-lg text-primary font-bold">۱۸+</p>
+<p class="font-label-sm text-label-sm text-secondary">دوره آموزشی</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg text-primary font-bold">۱۲.۵k</p>
+<p class="font-label-sm text-label-sm text-secondary">هنرجوی فعال</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg text-primary font-bold">۴.۹</p>
+<p class="font-label-sm text-label-sm text-secondary">امتیاز رضایت</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="mb-xl scroll-mt-32" id="reviews">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-lg text-headline-lg">نظرات دانشجویان</h2>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline">مشاهده همه نظرات</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Review Card 1 -->
+<div class="bg-white border border-outline-variant/20 p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">س</div>
+<div>
+<p class="font-label-md text-label-md font-bold">سارا محمودی</p>
+<p class="font-label-sm text-label-sm text-secondary">۲ هفته پیش</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div></div></div></div></section></div></div></main></body></html>

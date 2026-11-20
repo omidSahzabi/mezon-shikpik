@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>دوخت آکادمی | کاتالوگ الگوها</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700&display=swap');
+        
+        :root {
+            --font-main: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .pattern-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e3bdbf;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#ffdadb",
+                      "inverse-surface": "#233144",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "inverse-on-surface": "#eaf1ff",
+                      "tertiary-container": "#5c6164",
+                      "primary": "#95002a",
+                      "outline-variant": "#e3bdbf",
+                      "background": "#f8f9ff",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "surface-container-highest": "#d5e3fc",
+                      "surface-container": "#e6eeff",
+                      "primary-container": "#be123c",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-surface": "#0d1c2e",
+                      "on-primary-fixed-variant": "#920029",
+                      "surface-bright": "#f8f9ff",
+                      "primary-fixed-dim": "#ffb2b7",
+                      "on-error": "#ffffff",
+                      "surface": "#f8f9ff",
+                      "surface-tint": "#bb0f3a",
+                      "on-primary-fixed": "#40000d",
+                      "surface-container-high": "#dce9ff",
+                      "secondary-container": "#dae2fd",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "outline": "#8f6f70",
+                      "tertiary": "#44494d",
+                      "surface-dim": "#ccdbf3",
+                      "on-secondary-container": "#5c647a",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#5b4041",
+                      "on-primary-container": "#ffd0d2",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#d8dce0",
+                      "inverse-primary": "#ffb2b7",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#dfe3e7",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#565e74",
+                      "on-tertiary-fixed": "#171c1f",
+                      "surface-variant": "#d5e3fc",
+                      "secondary-fixed": "#dae2fd",
+                      "on-background": "#0d1c2e",
+                      "surface-container-low": "#eff4ff",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "sidebar-width": "280px",
+                      "lg": "40px",
+                      "base": "8px",
+                      "xl": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Geist"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "title-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Geist"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">دوخت آکادمی</span>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="architecture">architecture</span>
+</div>
+<!-- Nav Links (Desktop) -->
+<nav class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">درباره ما</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">کارگاه‌ها</a>
+<a class="font-title-md text-title-md text-primary border-b-2 border-primary pb-1" href="#">الگوها</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">دوره‌ها</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="relative group hidden sm:block">
+<input class="bg-surface-container-low border-none rounded-full py-2 px-10 text-label-md focus:ring-2 focus:ring-primary/20 w-48 transition-all group-focus-within:w-64" placeholder="جستجوی الگو..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant" data-icon="search">search</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:opacity-90 transition-all active:scale-95">ورود | ثبت‌نام</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-xl max-w-container-max mx-auto px-gutter">
+<!-- Hero Section / Title -->
+<div class="mb-xl text-right">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">آرشیو تخصصی الگوهای دوخت</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">دسترسی به دقیق‌ترین الگوهای متناسب با استانداردهای ۲۰۲۶ برای خلق آثاری ماندگار و حرفه‌ای.</p>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-72 space-y-8">
+<div>
+<h3 class="font-title-md text-title-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        فیلترها
+                    </h3>
+<div class="h-px bg-outline-variant/30 w-full mb-6"></div>
+</div>
+<!-- Categories -->
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-4">دسته‌بندی‌ها</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">لباس زنانه</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">پالتو و بارانی</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">لباس کودک</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">اکسسوری</span>
+</label>
+</div>
+</div>
+<!-- Difficulty -->
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-4">سطح دشواری</h4>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full border border-outline-variant text-label-sm hover:border-primary hover:text-primary transition-all bg-surface-container-lowest">مبتدی</button>
+<button class="px-4 py-1.5 rounded-full border border-primary text-label-sm bg-primary-fixed text-primary">متوسط</button>
+<button class="px-4 py-1.5 rounded-full border border-outline-variant text-label-sm hover:border-primary hover:text-primary transition-all bg-surface-container-lowest">پیشرفته</button>
+</div>
+</div>
+<!-- Featured Promotion -->
+<div class="p-6 rounded-xl bg-primary-fixed-dim/20 border border-primary/10 relative overflow-hidden group">
+<div class="relative z-10">
+<p class="font-label-sm text-label-sm text-primary mb-2">پیشنهاد ویژه</p>
+<h5 class="font-title-md text-title-md text-on-primary-fixed-variant mb-4">پکیج طلایی الگوهای تابستانه</h5>
+<button class="text-primary font-label-md flex items-center gap-1 group-hover:translate-x-[-4px] transition-transform">
+                            مشاهده پکیج
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<div class="absolute -bottom-6 -left-6 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-8xl" data-icon="styler">styler</span>
+</div>
+</div>
+</aside>
+<!-- Pattern Grid -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-8">
+<p class="font-label-md text-label-md text-on-surface-variant">نمایش ۱۲ از ۴۸ الگو</p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">مرتب‌سازی:</span>
+<select class="bg-transparent border-none font-label-md text-primary focus:ring-0 cursor-pointer">
+<option>جدیدترین‌ها</option>
+<option>محبوب‌ترین‌ها</option>
+<option>ارزان‌ترین</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Pattern Card 1 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium close-up studio photograph of a sophisticated high-fashion trench coat made of heavy cream-colored wool. The lighting is soft and cinematic, highlighting the intricate stitching and precise tailoring. The background is a minimalist atelier with rolls of luxury fabric. The image evokes a professional, high-end sewing academy aesthetic with a clean, light-mode palette and rich textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUdI4U5nQp2IqSlzRFWszu7cjj_o8lH8YdwBJDoj2wxhVywxUh57PApQ8lJmp-gNK9AV4cJQyqKo4_R6JV5jyUs_SK9OjsW4bK9xeT9EcGIHwHWjn5Wkepctrl38_ioAaCCbjcMC8F0eO-4MiMUHoe4Il9cahYfgFo6dnKtysRpcfP_rnyRUiS0HTXA0-ZwTX8oR70VuVAED8q8qE9lhXeY7eh2bEWzP5ejTB2NcC-89Pgvdm6Ww2-1A89_rFMlUEXJKW3HgeQ-18"/>
+<div class="hover-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-center justify-center">
+<button class="bg-surface text-primary px-6 py-2 rounded-full font-label-md shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all">مشاهده جزییات</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-label-sm text-primary font-bold">جدید</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">پالتو و بارانی</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۴.۹</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">الگوی بارانی کلاسیک «آرتمیس»</h3>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">۴۸۰,۰۰۰ تومان</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Pattern Card 2 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed flat-lay photograph of an elegant silk evening dress pattern, featuring flowing lines and delicate draping. The fabric is a deep crimson red, reflecting the primary brand color. The lighting is high-key and bright, with subtle shadows that provide depth. The composition is modern and artistic, suitable for a premium digital sewing catalog with a focus on craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3p_rHxsUOuFCUvYaTO2DxoA70-_DtwgDR_63Db2VLF9frNKuNy4ym3laBgbtPCSWdXMor5_oeTS5XEfZuZCLRS_MpX4_BrycTbQ_GH6jiuE9bk8Vuth3CFjiAKur12DrPDSsEmm-cTUA344BcFBHsEukA8YSxChvJA_cZpIjsi927i2dCG6JRCsa12OULoICsODIlcoQzFmFj-JcuwdafA1NUP8M3pE7eR6beqaCSh0LBiQzi_LNYeUbx-Nli1IYiXUND_6jLIpA"/>
+<div class="absolute top-4 left-4 bg-surface-container-highest/90 backdrop-blur px-3 py-1 rounded-full text-label-sm text-on-surface-variant">متوسط</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">لباس مجلسی</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۵.۰</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">الگوی پیراهن حریر مدل «رویا»</h3>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">۳۲۰,۰۰۰ تومان</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Pattern Card 3 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio photo of a child's designer jacket made from sustainable linen. The color palette is soft earth tones with a vibrant red accent button. The aesthetic is clean and contemporary, perfectly centered in the frame. Lighting is diffused and natural, highlighting the texture of the linen. The image represents modern, high-quality sewing patterns for children's wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRt42Wl2zvuIBOFCOzp5suLZWsHWiH0ep6UAnOfLQwJeGl-rbiLFYeNyPGzzGv-SpCXuMtHEylmKnXNFvZtQFHV7xkpanvM72YtxDcMExOtiuttwaBzUACUzoyEoinkIqGGmugFl5NUjvwWyWBblgxaL7bRPb-EVxH2IMnpp7qdDZxEn0edkETVZSyeDT15r6HIslXQtQkKvuA0lm9HCsXjTrNOVH4fq1xaSEpnixAyEe581JJIwiYQ2M1f8gC7e-vJT2isrGlGVw"/>
+<div class="absolute top-4 right-4 bg-error/10 border border-error/20 px-3 py-1 rounded-full text-label-sm text-error font-bold">تخفیف ۲۰٪</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">لباس کودک</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۴.۷</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">کت کتان بچگانه مدل «پونه»</h3>
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-on-surface-variant line-through text-xs">۲۵۰,۰۰۰</span>
+<span class="font-title-md text-title-md text-primary">۱۹۸,۰۰۰ تومان</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Additional patterns would follow... -->
+<!-- Pattern Card 4 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An atmospheric photograph of a minimalist sewing room where a tailored blazer pattern is spread across a white oak table. High-fidelity finishes, soft blurs, and natural morning light coming through a window create a luxurious feel. The blazer is a charcoal grey with subtle red thread details. The mood is serene and focused on technical mastery in fashion design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmTANhMBOgqR18lzVdSAIs-LvsyAhY_44z0yfOedftUKuxPoBL9ZIUi4lwwlXxsVcAQY1Ghqgy-HqEhhqIDbLpH-h3wzgC1ukxDUcaFXDiVXL-sGIAhC5cmWigZ_E6lLN-4eUe2rRkxm0-O3b4Y9aqWl97dpY9b1BfuzRqLwDyj0O3p_9HiffP-IQvMOLFPsxWQhzilOlztsZuhQbC8Ca8-vBykGq-euY_FltRKrzl-YVbgv3U0I3g4Op8VYd6FwkzCO74SIRURu4"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">لباس رسمی</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۴.۸</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">الگوی کت تک زنانه «بیتا»</h3>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">۵۵۰,۰۰۰ تومان</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Pattern Card 5 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist shot of a modern linen jumpsuit on a wooden mannequin. The design is architectural and precise, with a focus on asymmetric details. The lighting is crisp, creating sharp but soft shadows that emphasize the pattern's structure. The aesthetic is a mix of traditional craft and modern tech-driven efficiency, using a neutral palette with primary red accents in the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH4mhqxIP1uiayiizEusXuUrD9HOoiL3Lxg7nkcdEn7uedcxw88gruvG7gJ7gk0NHbH3RcX6FeMY0S7BlD_zI_F8FYKv-1FuNOxeGcU96hk1cGohg6W2YUh0ATBRlK3dfSAKKRlMR8edwSDxTBh4hszTFYJ_FpM7chNGCxLSEjklSwEushiCYQPqfL8Hg5QmvU-3h5SW4HRuZ4AgfxuSB9vSjszgDgr4kVbfhxlKDRpAVJjzQeTJjqRse_jGU9G7Aaj7gB3Q-ypMc"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">لباس کژوال</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۴.۶</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">الگوی جامپسوت مدل «آسا»</h3>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">۲۹۰,۰۰۰ تومان</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Pattern Card 6 -->
+<article class="pattern-card group relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph showcasing the texture of a premium silk scarf and its printed sewing pattern. The focus is sharp on the edge of the fabric where the needlework will occur. The style is high-end fashion atelier, using a palette of off-white and deep maroon. Lighting is elegant and atmospheric, highlighting the precision required for high-end sewing masterclasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBSujjCJbaDMhweR0PekduZFhuu5M7zGBcs3ZILxgWeA_Fk6ssV8pexmeZrEfBEr5bvBRfA2JuIBEKNq4b558e3YHmjOvz6t03tRgRU09t8CK2USbywyGu9DK_dn2iwwjBKzJsvZsY956NrvqY7ezOm9BAXDcteWU_Db5acTpkCMCTYup30Gyk0XJfuYdXNb0MAo0cSU3jOqZZaca-xGvUWNZZP6LkyB985B7DwCOJ3inKtw-RQNmd_FbrQn3Kl7diB4t0F5SLrpk"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">اکسسوری</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">۴.۹</span>
+</div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">الگوی شال و توربان مدل «صدف»</h3>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">۱۸۰,۰۰۰ تومان</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-label-md">۱</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary transition-all">۲</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary transition-all">۳</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary transition-all">۸</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- AI Assistant (Tailor AI) -->
+<div class="fixed bottom-8 left-8 z-50">
+<button class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group" id="ai-toggle">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform" data-icon="smart_toy">smart_toy</span>
+</button>
+<!-- Quick Help Tooltip -->
+<div class="absolute bottom-20 left-0 bg-white shadow-xl rounded-xl p-4 w-64 border border-outline-variant/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+<p class="font-label-md text-label-md text-on-surface mb-2">نیاز به کمک دارید؟</p>
+<p class="font-body-md text-xs text-on-surface-variant">دستیار هوشمند ما آماده است تا شما را در انتخاب بهترین الگو راهنمایی کند.</p>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center gap-md px-gutter py-xl max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">دوخت آکادمی</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">مرکز تخصصی آموزش و عرضه الگوهای دوخت مدرن</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">قوانین و مقررات</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">تماس با ما</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">سوالات متداول</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">حریم خصوصی</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© ۲۰۲۶ تمامی حقوق برای آکادمی دوخت محفوظ است.</p>
+</div>
+</footer>
+<script>
+        // Simple Interaction logic
+        const filterButtons = document.querySelectorAll('button[class*="border-outline-variant"]');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active state for difficulty buttons as an example
+                if (btn.innerText === 'مبتدی' || btn.innerText === 'متوسط' || btn.innerText === 'پیشرفته') {
+                    filterButtons.forEach(b => {
+                        if (b.innerText === 'مبتدی' || b.innerText === 'متوسط' || b.innerText === 'پیشرفته') {
+                            b.classList.remove('bg-primary-fixed', 'text-primary', 'border-primary');
+                            b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border-outline-variant');
+                        }
+                    });
+                    btn.classList.add('bg-primary-fixed', 'text-primary', 'border-primary');
+                    btn.classList.remove('bg-surface-container-lowest', 'border-outline-variant');
+                }
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary/20');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/20');
+        });
+    </script>
+</body></html>
